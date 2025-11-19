@@ -24,7 +24,8 @@ export default function Home() {
             Pearl (Morvarid) Lalenoor
           </h1>
           <p className="mb-6 text-lg font-semibold text-purple-800 dark:text-purple-600 sm:mb-8 sm:text-xl md:text-2xl">
-            Data Scientist
+            AI & ML Engineer | LLMOps | MSc in Electrical & Software Engineering
+            | Researcher in Healthcare AI
           </p>
           <p className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-zinc-700 sm:mb-12 sm:text-lg dark:text-zinc-300">
             Machine learning researcher with experience building model

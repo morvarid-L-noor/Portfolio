@@ -29,7 +29,7 @@ export default function Contact() {
               <p>
                 <span className="font-medium">LinkedIn:</span>{" "}
                 <a
-                  href="#"
+                  href="https://linkedin.com/in/lalenoor"
                   className="font-semibold text-purple-800 transition-colors hover:text-purple-900 hover:underline dark:text-purple-600 dark:hover:text-purple-500"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -40,7 +40,7 @@ export default function Contact() {
               <p>
                 <span className="font-medium">GitHub:</span>{" "}
                 <a
-                  href="#"
+                  href="https://github.com/morvarid-L-noor"
                   className="font-semibold text-purple-800 transition-colors hover:text-purple-900 hover:underline dark:text-purple-600 dark:hover:text-purple-500"
                   target="_blank"
                   rel="noopener noreferrer"

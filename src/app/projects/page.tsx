@@ -15,7 +15,10 @@ export default function Projects() {
 
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* Project Card 1 */}
-          <div className="group rounded-xl border-2 border-purple-300 bg-gradient-to-br from-white to-purple-50/50 p-4 transition-all hover:scale-105 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-300 sm:p-6 dark:border-purple-800 dark:from-zinc-900 dark:to-purple-950/30 dark:hover:border-purple-700 dark:hover:shadow-purple-900/50">
+          <Link
+            href="/projects/ai-augmented-rfics"
+            className="group cursor-pointer rounded-xl border-2 border-purple-300 bg-gradient-to-br from-white to-purple-50/50 p-4 transition-all hover:scale-105 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-300 sm:p-6 dark:border-purple-800 dark:from-zinc-900 dark:to-purple-950/30 dark:hover:border-purple-700 dark:hover:shadow-purple-900/50"
+          >
             <div className="mb-3 aspect-video rounded-lg bg-gradient-to-br from-purple-200 to-purple-300 sm:mb-4 dark:from-purple-900 dark:to-purple-800">
               <img
                 src="/general_overview.png"
@@ -62,10 +65,10 @@ export default function Projects() {
                 Python
               </span>
             </div>
-          </div>
+          </Link>
 
           {/* Project Card 2 */}
-          <div className="group rounded-xl border-2 border-purple-300 bg-gradient-to-br from-white to-purple-50/50 p-4 transition-all hover:scale-105 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-300 sm:p-6 dark:border-purple-800 dark:from-zinc-900 dark:to-purple-950/30 dark:hover:border-purple-700 dark:hover:shadow-purple-900/50">
+          <div className="group rounded-xl border-2 border-purple-300 bg-gradient-to-br from-white to-purple-50/50 p-4 sm:p-6 dark:border-purple-800 dark:from-zinc-900 dark:to-purple-950/30">
             <div className="mb-3 aspect-video rounded-lg bg-gradient-to-br from-purple-200 to-purple-300 sm:mb-4 dark:from-purple-900 dark:to-purple-800">
               <img
                 src="/canis2.png"
@@ -73,8 +76,8 @@ export default function Projects() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h2 className="mb-2 text-lg font-semibold text-purple-800 transition-colors group-hover:text-purple-900 sm:text-xl dark:text-purple-600 dark:group-hover:text-purple-500">
-              CANIS2 Hackathon 2023 Data Visualization
+            <h2 className="mb-2 text-lg font-semibold text-purple-800 sm:text-xl dark:text-purple-600">
+              CANIS2 Hackathon Data Visualization and Foreign Interference
             </h2>
             <p className="mb-2 text-xs text-zinc-500 sm:mb-3 sm:text-sm dark:text-zinc-500">
               Nov 17 - Nov 20, 2023 | Winner ($3,500)
@@ -122,7 +125,7 @@ export default function Projects() {
           </div>
 
           {/* Project Card 3 */}
-          <div className="group rounded-xl border-2 border-purple-300 bg-gradient-to-br from-white to-purple-50/50 p-4 transition-all hover:scale-105 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-300 sm:p-6 dark:border-purple-800 dark:from-zinc-900 dark:to-purple-950/30 dark:hover:border-purple-700 dark:hover:shadow-purple-900/50">
+          <div className="group rounded-xl border-2 border-purple-300 bg-gradient-to-br from-white to-purple-50/50 p-4 sm:p-6 dark:border-purple-800 dark:from-zinc-900 dark:to-purple-950/30">
             <div className="mb-3 aspect-video rounded-lg bg-gradient-to-br from-purple-200 to-purple-300 sm:mb-4 dark:from-purple-900 dark:to-purple-800">
               <img
                 src="/canis.png"
@@ -130,8 +133,8 @@ export default function Projects() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h2 className="mb-2 text-lg font-semibold text-purple-800 transition-colors group-hover:text-purple-900 sm:text-xl dark:text-purple-600 dark:group-hover:text-purple-500">
-              CANIS Hackathon 2023 Data Analysis
+            <h2 className="mb-2 text-lg font-semibold text-purple-800 sm:text-xl dark:text-purple-600">
+              Canadian Network on Information and Security (CANIS) Hackathon
             </h2>
             <p className="mb-2 text-xs text-zinc-500 sm:mb-3 sm:text-sm dark:text-zinc-500">
               Mar 31 - Apr 3, 2023 | Winner ($4,000)
@@ -180,7 +183,10 @@ export default function Projects() {
           </div>
 
           {/* Project Card 4 */}
-          <div className="group rounded-xl border-2 border-purple-300 bg-gradient-to-br from-white to-purple-50/50 p-4 transition-all hover:scale-105 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-300 sm:p-6 dark:border-purple-800 dark:from-zinc-900 dark:to-purple-950/30 dark:hover:border-purple-700 dark:hover:shadow-purple-900/50">
+          <Link
+            href="/projects/musculoskeletal-disorders"
+            className="group cursor-pointer rounded-xl border-2 border-purple-300 bg-gradient-to-br from-white to-purple-50/50 p-4 transition-all hover:scale-105 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-300 sm:p-6 dark:border-purple-800 dark:from-zinc-900 dark:to-purple-950/30 dark:hover:border-purple-700 dark:hover:shadow-purple-900/50"
+          >
             <div className="mb-3 aspect-video rounded-lg bg-gradient-to-br from-purple-200 to-purple-300 sm:mb-4 dark:from-purple-900 dark:to-purple-800">
               <img
                 src="/bsc.png"
@@ -220,10 +226,13 @@ export default function Projects() {
                 Transfer Learning
               </span>
             </div>
-          </div>
+          </Link>
 
           {/* Project Card 5 */}
-          <div className="group rounded-xl border-2 border-purple-300 bg-gradient-to-br from-white to-purple-50/50 p-4 transition-all hover:scale-105 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-300 sm:p-6 dark:border-purple-800 dark:from-zinc-900 dark:to-purple-950/30 dark:hover:border-purple-700 dark:hover:shadow-purple-900/50">
+          <Link
+            href="/projects/image-denoising"
+            className="group cursor-pointer rounded-xl border-2 border-purple-300 bg-gradient-to-br from-white to-purple-50/50 p-4 transition-all hover:scale-105 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-300 sm:p-6 dark:border-purple-800 dark:from-zinc-900 dark:to-purple-950/30 dark:hover:border-purple-700 dark:hover:shadow-purple-900/50"
+          >
             <div className="mb-3 aspect-video rounded-lg bg-gradient-to-br from-purple-200 to-purple-300 sm:mb-4 dark:from-purple-900 dark:to-purple-800">
               <img
                 src="/image_processing.png"
@@ -264,7 +273,7 @@ export default function Projects() {
                 Matplotlib
               </span>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </main>
