@@ -61,6 +61,22 @@ const projects: Record<
     images: ["/image_processing.png"], // Add more image paths here
     mainImage: "/image_processing.png",
   },
+  "rag-llm-agent": {
+    title: "RAG and LLM Agent for Special Education",
+    affiliation: "Pointsville",
+    date: "Jun. 2024 - Aug. 2024",
+    description:
+      "Built an AI agent to centralize information for special education (SPED) children and assist parents in understanding available services and interpreting IEPs. Developed web scraping and data querying tools using Python (FastAPI) and LangChain, enabling context-aware responses from a vector database (FAISS).",
+    details: [
+      "Implemented RAG (Retrieval-Augmented Generation) architecture for accurate, context-aware responses",
+      "Built vector database using FAISS for efficient semantic search",
+      "Developed web scraping pipeline to collect and index relevant information",
+      "Created FastAPI backend with LangChain integration for real-time query processing",
+    ],
+    technologies: ["RAG", "LLM", "LangChain", "FastAPI", "FAISS", "Python"],
+    images: ["/general_overview.png"], // Add more image paths here
+    mainImage: "/general_overview.png",
+  },
 };
 
 // Generate static params for the known project slugs
@@ -83,12 +99,12 @@ export default async function ProjectDetail({
   }
 
   return (
-    <main className="min-h-screen px-4 py-12 sm:py-20">
-      <div className="mx-auto max-w-4xl">
+    <main className="min-h-screen px-2 py-8 sm:px-4 sm:py-12">
+      <div className="mx-auto max-w-7xl">
         {/* Back Button */}
         <Link
           href="/projects"
-          className="mb-6 inline-flex items-center text-sm font-medium text-purple-800 transition-colors hover:text-purple-900 dark:text-purple-600 dark:hover:text-purple-500 sm:mb-8"
+          className="mb-6 inline-flex items-center text-sm font-medium text-black transition-colors hover:text-black/80 dark:text-white dark:hover:text-white/80 sm:mb-8"
         >
           ← Back to Projects
         </Link>
@@ -107,10 +123,10 @@ export default async function ProjectDetail({
 
         {/* Project Header */}
         <div className="mb-6 sm:mb-8">
-          <h1 className="mb-3 text-2xl font-bold text-purple-800 sm:text-3xl md:text-4xl dark:text-purple-600">
+          <h1 className="mb-3 text-2xl font-bold text-black sm:text-3xl md:text-4xl dark:text-white">
             {project.title}
           </h1>
-          <div className="mb-4 space-y-1 text-sm text-zinc-600 sm:text-base dark:text-zinc-400">
+          <div className="mb-4 space-y-1 text-sm text-black sm:text-base dark:text-white">
             {project.affiliation && (
               <p>
                 <span className="font-medium">Affiliation:</span>{" "}
@@ -125,10 +141,10 @@ export default async function ProjectDetail({
 
         {/* Description */}
         <div className="mb-6 sm:mb-8">
-          <h2 className="mb-3 text-xl font-semibold text-purple-800 sm:text-2xl dark:text-purple-600">
+          <h2 className="mb-3 text-xl font-semibold text-black sm:text-2xl dark:text-white">
             Overview
           </h2>
-          <p className="text-base leading-relaxed text-zinc-700 sm:text-lg dark:text-zinc-300">
+          <p className="text-base leading-relaxed text-black sm:text-lg dark:text-white">
             {project.description}
           </p>
         </div>
@@ -136,10 +152,10 @@ export default async function ProjectDetail({
         {/* Details/Key Points */}
         {project.details && project.details.length > 0 && (
           <div className="mb-6 sm:mb-8">
-            <h2 className="mb-3 text-xl font-semibold text-purple-800 sm:text-2xl dark:text-purple-600">
+            <h2 className="mb-3 text-xl font-semibold text-black sm:text-2xl dark:text-white">
               Key Achievements
             </h2>
-            <ul className="ml-4 list-disc space-y-2 text-base text-zinc-700 sm:text-lg dark:text-zinc-300">
+            <ul className="ml-4 list-disc space-y-2 text-base text-black sm:text-lg dark:text-white">
               {project.details.map((detail, index) => (
                 <li key={index}>{detail}</li>
               ))}
@@ -150,7 +166,7 @@ export default async function ProjectDetail({
         {/* Image Gallery */}
         {project.images && project.images.length > 1 && (
           <div className="mb-6 sm:mb-8">
-            <h2 className="mb-4 text-xl font-semibold text-purple-800 sm:text-2xl dark:text-purple-600">
+            <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl dark:text-white">
               Gallery
             </h2>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -174,7 +190,7 @@ export default async function ProjectDetail({
 
         {/* Technologies */}
         <div className="mb-6 sm:mb-8">
-          <h2 className="mb-4 text-xl font-semibold text-purple-800 sm:text-2xl dark:text-purple-600">
+          <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl dark:text-white">
             Technologies Used
           </h2>
           <div className="flex flex-wrap gap-2 sm:gap-3">

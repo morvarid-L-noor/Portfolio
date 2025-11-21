@@ -3,18 +3,78 @@ import TableauEmbed from "@/components/canisIIexample";
 
 export default function Projects() {
   return (
-    <main className="min-h-screen px-4 py-12 sm:py-20">
-      <div className="mx-auto max-w-6xl">
-        <h1 className="mb-4 text-3xl font-bold text-purple-800 sm:text-4xl dark:text-purple-600">
+    <main className="min-h-screen px-2 py-8 sm:px-4 sm:py-12">
+      <div className="mx-auto max-w-7xl">
+        <h1 className="mb-4 text-3xl font-bold text-black sm:text-4xl dark:text-white">
           Projects
         </h1>
-        <p className="mb-8 text-base text-zinc-600 sm:mb-12 sm:text-lg dark:text-zinc-400">
+        <p className="mb-8 text-base text-black sm:mb-12 sm:text-lg dark:text-white">
           A collection of my work and projects. Click on any project to learn
           more.
         </p>
 
-        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {/* Project Card 1 */}
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {/* Project Card - RAG/LLM */}
+          {/* <Link
+            href="/projects/rag-llm-agent"
+            className="group cursor-pointer rounded-xl border-2 border-purple-300 bg-gradient-to-br from-white to-purple-50/50 p-4 transition-all hover:scale-105 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-300 sm:p-6 dark:border-purple-800 dark:from-zinc-900 dark:to-purple-950/30 dark:hover:border-purple-700 dark:hover:shadow-purple-900/50"
+          >
+            <div className="mb-3 aspect-video rounded-lg bg-gradient-to-br from-purple-200 to-purple-300 sm:mb-4 dark:from-purple-900 dark:to-purple-800">
+              <img
+                src="/general_overview.png"
+                alt="RAG and LLM Agent for Special Education"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h2 className="mb-2 text-lg font-semibold text-black transition-colors group-hover:text-black/80 sm:text-xl dark:text-white dark:group-hover:text-white/80">
+              RAG and LLM Agent for Special Education
+            </h2>
+            <p className="mb-2 text-xs text-black sm:mb-3 sm:text-sm dark:text-white">
+              Pointsville | Jun. 2024 - Aug. 2024
+            </p>
+            <p className="mb-3 text-sm text-black sm:mb-4 sm:text-base dark:text-white">
+              Built an AI agent to centralize information for special education
+              (SPED) children and assist parents in understanding available
+              services and interpreting IEPs. Developed web scraping and data
+              querying tools using Python (FastAPI) and LangChain, enabling
+              context-aware responses from a vector database (FAISS).
+            </p>
+            <ul className="mb-3 ml-4 list-disc space-y-1 text-xs text-black sm:mb-4 sm:text-sm dark:text-white">
+              <li>
+                Implemented RAG (Retrieval-Augmented Generation) architecture
+                for accurate, context-aware responses
+              </li>
+              <li>
+                Built vector database using FAISS for efficient semantic search
+              </li>
+              <li>
+                Developed web scraping pipeline to collect and index relevant
+                information
+              </li>
+            </ul>
+            <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
+              <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
+                RAG
+              </span>
+              <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
+                LLM
+              </span>
+              <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
+                LangChain
+              </span>
+              <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
+                FastAPI
+              </span>
+              <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
+                FAISS
+              </span>
+              <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
+                Python
+              </span>
+            </div>
+          </Link> */}
+
+          {/* Project Card 1 - RFIC */}
           <Link
             href="/projects/ai-augmented-rfics"
             className="group cursor-pointer rounded-xl border-2 border-purple-300 bg-gradient-to-br from-white to-purple-50/50 p-4 transition-all hover:scale-105 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-300 sm:p-6 dark:border-purple-800 dark:from-zinc-900 dark:to-purple-950/30 dark:hover:border-purple-700 dark:hover:shadow-purple-900/50"
@@ -26,21 +86,21 @@ export default function Projects() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h2 className="mb-2 text-lg font-semibold text-purple-800 transition-colors group-hover:text-purple-900 sm:text-xl dark:text-purple-600 dark:group-hover:text-purple-500">
+            <h2 className="mb-2 text-lg font-semibold text-black transition-colors group-hover:text-black/80 sm:text-xl dark:text-white dark:group-hover:text-white/80">
               AI-Augmented RFICs for Transmitter Predistortion for 5G and 6G
               Communication Applications
             </h2>
-            <p className="mb-2 text-xs text-zinc-500 sm:mb-3 sm:text-sm dark:text-zinc-500">
+            <p className="mb-2 text-xs text-black sm:mb-3 sm:text-sm dark:text-white">
               University of Calgary | Fall 2022 - Winter 2025
             </p>
-            <p className="mb-3 text-sm text-zinc-600 sm:mb-4 sm:text-base dark:text-zinc-400">
+            <p className="mb-3 text-sm text-black sm:mb-4 sm:text-base dark:text-white">
               Developed an ML-based approach to optimize analog predistortion
               (APD) circuits for power amplifiers in communication systems.
               Collected and preprocessed measurement data from hardware to
               analyze gain and phase transformations under varying control
               voltages.
             </p>
-            <ul className="mb-3 ml-4 list-disc space-y-1 text-xs text-zinc-600 sm:mb-4 sm:text-sm dark:text-zinc-400">
+            <ul className="mb-3 ml-4 list-disc space-y-1 text-xs text-black sm:mb-4 sm:text-sm dark:text-white">
               <li>
                 Implemented dimensionality reduction using PCA to enhance
                 learning efficiency
@@ -76,13 +136,13 @@ export default function Projects() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h2 className="mb-2 text-lg font-semibold text-purple-800 sm:text-xl dark:text-purple-600">
+            <h2 className="mb-2 text-lg font-semibold text-black sm:text-xl dark:text-white">
               CANIS2 Hackathon Data Visualization and Foreign Interference
             </h2>
-            <p className="mb-2 text-xs text-zinc-500 sm:mb-3 sm:text-sm dark:text-zinc-500">
+            <p className="mb-2 text-xs text-black sm:mb-3 sm:text-sm dark:text-white">
               Nov 17 - Nov 20, 2023 | Winner ($3,500)
             </p>
-            <p className="mb-3 text-sm text-zinc-600 sm:mb-4 sm:text-base dark:text-zinc-400">
+            <p className="mb-3 text-sm text-black sm:mb-4 sm:text-base dark:text-white">
               Analyzed a dataset of 750 suspicious accounts on social media.
               Performed more than ten analyses with detailed interpretations.
               Won Second Prize and Best Performance in Visualization.
@@ -106,7 +166,7 @@ export default function Projects() {
                 href="https://devpost.com/software/china-s-impact"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-semibold text-purple-800 transition-colors hover:text-purple-900 dark:text-purple-600 dark:hover:text-purple-500"
+                className="text-sm font-semibold text-black transition-colors hover:text-black/80 dark:text-white dark:hover:text-white/80"
               >
                 View Project →
               </a>
@@ -117,7 +177,7 @@ export default function Projects() {
                 href="https://chinaimpact.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-semibold text-purple-800 transition-colors hover:text-purple-900 dark:text-purple-600 dark:hover:text-purple-500"
+                className="text-sm font-semibold text-black transition-colors hover:text-black/80 dark:text-white dark:hover:text-white/80"
               >
                 View Website →
               </a>
@@ -133,13 +193,13 @@ export default function Projects() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h2 className="mb-2 text-lg font-semibold text-purple-800 sm:text-xl dark:text-purple-600">
+            <h2 className="mb-2 text-lg font-semibold text-black sm:text-xl dark:text-white">
               Canadian Network on Information and Security (CANIS) Hackathon
             </h2>
-            <p className="mb-2 text-xs text-zinc-500 sm:mb-3 sm:text-sm dark:text-zinc-500">
+            <p className="mb-2 text-xs text-black sm:mb-3 sm:text-sm dark:text-white">
               Mar 31 - Apr 3, 2023 | Winner ($4,000)
             </p>
-            <p className="mb-3 text-sm text-zinc-600 sm:mb-4 sm:text-base dark:text-zinc-400">
+            <p className="mb-3 text-sm text-black sm:mb-4 sm:text-base dark:text-white">
               Analyzed the "fake and true news" dataset. Deployed a tuned
               passive-aggressive classifier that classified texts with 95%
               accuracy. Performed more than eight analyses with detailed
@@ -164,7 +224,7 @@ export default function Projects() {
                 href="https://devpost.com/software/canis-winners"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-semibold text-purple-800 transition-colors hover:text-purple-900 dark:text-purple-600 dark:hover:text-purple-500"
+                className="text-sm font-semibold text-black transition-colors hover:text-black/80 dark:text-white dark:hover:text-white/80"
               >
                 View Project →
               </a>
@@ -175,7 +235,7 @@ export default function Projects() {
                 href="https://fakeortrue.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-semibold text-purple-800 transition-colors hover:text-purple-900 dark:text-purple-600 dark:hover:text-purple-500"
+                className="text-sm font-semibold text-black transition-colors hover:text-black/80 dark:text-white dark:hover:text-white/80"
               >
                 View Website →
               </a>
@@ -194,19 +254,19 @@ export default function Projects() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h2 className="mb-2 text-lg font-semibold text-purple-800 transition-colors group-hover:text-purple-900 sm:text-xl dark:text-purple-600 dark:group-hover:text-purple-500">
+            <h2 className="mb-2 text-lg font-semibold text-black transition-colors group-hover:text-black/80 sm:text-xl dark:text-white dark:group-hover:text-white/80">
               Prediction of Musculoskeletal Disorders (BSc. Thesis)
             </h2>
-            <p className="mb-2 text-xs text-zinc-500 sm:mb-3 sm:text-sm dark:text-zinc-500">
+            <p className="mb-2 text-xs text-black sm:mb-3 sm:text-sm dark:text-white">
               Mar. 2021 - Sept. 2021
             </p>
-            <p className="mb-3 text-sm text-zinc-600 sm:mb-4 sm:text-base dark:text-zinc-400">
+            <p className="mb-3 text-sm text-black sm:mb-4 sm:text-base dark:text-white">
               Worked with a dataset collected over six years from 1,818
               patients. Pre-processed the data to create a clean dataset
               suitable for analysis. Applied CNN, MLP, SVM, and transfer
               learning to predict different disorders.
             </p>
-            <ul className="mb-3 ml-4 list-disc space-y-1 text-xs text-zinc-600 sm:mb-4 sm:text-sm dark:text-zinc-400">
+            <ul className="mb-3 ml-4 list-disc space-y-1 text-xs text-black sm:mb-4 sm:text-sm dark:text-white">
               <li>
                 Transfer learning achieved best accuracy (85%) predicting ten
                 disorders
@@ -240,15 +300,15 @@ export default function Projects() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h2 className="mb-2 text-lg font-semibold text-purple-800 transition-colors group-hover:text-purple-900 sm:text-xl dark:text-purple-600 dark:group-hover:text-purple-500">
+            <h2 className="mb-2 text-lg font-semibold text-black transition-colors group-hover:text-black/80 sm:text-xl dark:text-white dark:group-hover:text-white/80">
               Denoising images in the frequency domain and visualizing the
               effects
             </h2>
-            <p className="mb-2 text-xs text-zinc-500 sm:mb-3 sm:text-sm dark:text-zinc-500">
+            <p className="mb-2 text-xs text-black sm:mb-3 sm:text-sm dark:text-white">
               Spring 2021
             </p>
 
-            <ul className="mb-3 ml-4 list-disc space-y-1 text-xs text-zinc-600 sm:mb-4 sm:text-sm dark:text-zinc-400">
+            <ul className="mb-3 ml-4 list-disc space-y-1 text-xs text-black sm:mb-4 sm:text-sm dark:text-white">
               <li>
                 Recognized the type of noise that images had ( images were in
                 .dcm format )

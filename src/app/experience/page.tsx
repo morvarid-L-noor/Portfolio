@@ -1,8 +1,8 @@
 export default function Experience() {
   return (
-    <main className="min-h-screen px-4 py-12 sm:py-20">
-      <div className="mx-auto max-w-4xl">
-        <h1 className="mb-8 text-3xl font-bold text-purple-800 sm:mb-12 sm:text-4xl dark:text-purple-600">
+    <main className="min-h-screen px-2 py-8 sm:px-4 sm:py-12">
+      <div className="mx-auto max-w-7xl">
+        <h1 className="mb-8 text-3xl font-bold text-black sm:mb-12 sm:text-4xl dark:text-white">
           Experience
         </h1>
 
@@ -11,17 +11,17 @@ export default function Experience() {
           <div className="relative border-l-4 border-purple-500 pl-6 sm:pl-8 dark:border-purple-700">
             <div className="absolute -left-2.5 top-0 h-5 w-5 rounded-full bg-purple-600 ring-4 ring-purple-100 sm:-left-3 sm:h-6 sm:w-6 dark:ring-purple-900/50"></div>
             <div className="mb-2">
-              <h2 className="text-xl font-semibold text-foreground sm:text-2xl">
+              <h2 className="text-xl font-semibold text-black sm:text-2xl dark:text-white">
                 Research Assistant
               </h2>
-              <p className="text-base text-zinc-600 sm:text-lg dark:text-zinc-400">
+              <p className="text-base text-black sm:text-lg dark:text-white">
                 University of Calgary | Calgary, Canada
               </p>
-              <p className="text-xs text-zinc-500 sm:text-sm dark:text-zinc-500">
+              <p className="text-xs text-black sm:text-sm dark:text-white">
                 Sept. 2022 - May 2025
               </p>
             </div>
-            <div className="mt-4 space-y-2 text-sm text-zinc-700 sm:text-base dark:text-zinc-300">
+            <div className="mt-4 space-y-2 text-sm text-black sm:text-base dark:text-white">
               <ul className="ml-4 list-disc space-y-1 sm:ml-6">
                 <li>
                   Designed machine learning models for complex control-feedback
@@ -43,17 +43,17 @@ export default function Experience() {
           <div className="relative border-l-4 border-purple-500 pl-6 sm:pl-8 dark:border-purple-700">
             <div className="absolute -left-2.5 top-0 h-5 w-5 rounded-full bg-purple-600 ring-4 ring-purple-100 sm:-left-3 sm:h-6 sm:w-6 dark:ring-purple-900/50"></div>
             <div className="mb-2">
-              <h2 className="text-xl font-semibold text-foreground sm:text-2xl">
+              <h2 className="text-xl font-semibold text-black sm:text-2xl dark:text-white">
                 LLMOps Summer Intern
               </h2>
-              <p className="text-base text-zinc-600 sm:text-lg dark:text-zinc-400">
+              <p className="text-base text-black sm:text-lg dark:text-white">
                 Pointsville | Calgary, Canada
               </p>
-              <p className="text-xs text-zinc-500 sm:text-sm dark:text-zinc-500">
+              <p className="text-xs text-black sm:text-sm dark:text-white">
                 Jun. 2024 - Aug. 2024
               </p>
             </div>
-            <div className="mt-4 space-y-4 text-sm text-zinc-700 sm:text-base dark:text-zinc-300">
+            <div className="mt-4 space-y-4 text-sm text-black sm:text-base dark:text-white">
               <ul className="ml-4 list-disc space-y-3 sm:ml-6">
                 <li>
                   <span className="font-semibold">
@@ -96,17 +96,17 @@ export default function Experience() {
           <div className="relative border-l-4 border-purple-500 pl-6 sm:pl-8 dark:border-purple-700">
             <div className="absolute -left-2.5 top-0 h-5 w-5 rounded-full bg-purple-600 ring-4 ring-purple-100 sm:-left-3 sm:h-6 sm:w-6 dark:ring-purple-900/50"></div>
             <div className="mb-2">
-              <h2 className="text-xl font-semibold text-foreground sm:text-2xl">
+              <h2 className="text-xl font-semibold text-black sm:text-2xl dark:text-white">
                 AI and Algorithms Engineer
               </h2>
-              <p className="text-base text-zinc-600 sm:text-lg dark:text-zinc-400">
+              <p className="text-base text-black sm:text-lg dark:text-white">
                 Daya-Rahyaft Company | Tehran, Iran
               </p>
-              <p className="text-xs text-zinc-500 sm:text-sm dark:text-zinc-500">
+              <p className="text-xs text-black sm:text-sm dark:text-white">
                 Oct 2020 - April 2022
               </p>
             </div>
-            <div className="mt-4 space-y-2 text-sm text-zinc-700 sm:text-base dark:text-zinc-300">
+            <div className="mt-4 space-y-2 text-sm text-black sm:text-base dark:text-white">
               <ul className="ml-4 list-disc space-y-1 sm:ml-6">
                 <li>
                   Developed Long Short-Term Memory (LSTM) models for time-series
@@ -131,40 +131,40 @@ export default function Experience() {
 
         {/* Education Section */}
         <div className="mt-12 sm:mt-20">
-          <h2 className="mb-6 text-2xl font-bold text-purple-800 sm:mb-8 sm:text-3xl dark:text-purple-600">
+          <h2 className="mb-6 text-2xl font-bold text-black sm:mb-8 sm:text-3xl dark:text-white">
             Education
           </h2>
           <div className="space-y-6 sm:space-y-8">
             <div>
-              <h3 className="text-lg font-semibold text-foreground sm:text-xl">
+              <h3 className="text-lg font-semibold text-black sm:text-xl dark:text-white">
                 MSc. in Electrical and Software Engineering
               </h3>
-              <p className="text-base text-zinc-600 sm:text-lg dark:text-zinc-400">
+              <p className="text-base text-black sm:text-lg dark:text-white">
                 University of Calgary | Calgary, Canada
               </p>
-              <p className="text-xs text-zinc-500 sm:text-sm dark:text-zinc-500">
+              <p className="text-xs text-black sm:text-sm dark:text-white">
                 Graduation Year: 2025
               </p>
-              <p className="mt-2 text-zinc-700 dark:text-zinc-300">
+              <p className="mt-2 text-black dark:text-white">
                 GPA: 3.7/4.0
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-foreground">
+              <h3 className="text-xl font-semibold text-black dark:text-white">
                 BSc. in Electrical Engineering
               </h3>
-              <p className="text-lg text-zinc-600 dark:text-zinc-400">
+              <p className="text-lg text-black dark:text-white">
                 Amirkabir University of Technology | Tehran, Iran
               </p>
-              <p className="text-sm text-zinc-500 dark:text-zinc-500">
+              <p className="text-sm text-black dark:text-white">
                 Graduation Year: 2022
               </p>
-              <p className="mt-2 text-zinc-700 dark:text-zinc-300">
+              <p className="mt-2 text-black dark:text-white">
                 GPA: 3.7/4.0
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-foreground">
+              <h3 className="text-xl font-semibold text-black dark:text-white">
                 Minor in Computer Engineering
               </h3>
               <p className="text-lg text-zinc-600 dark:text-zinc-400">

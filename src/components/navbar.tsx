@@ -19,11 +19,11 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 border-b border-purple-400/60 bg-white/90 backdrop-blur-md dark:border-purple-800/50 dark:bg-zinc-950/90">
-      <div className="mx-auto max-w-7xl px-4 py-4">
+      <div className="mx-auto max-w-7xl px-2 py-3 sm:px-4 sm:py-4">
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className="text-lg font-bold text-purple-800 transition-all hover:scale-105 sm:text-xl dark:text-purple-600"
+            className="text-lg font-bold text-black transition-all hover:scale-105 sm:text-xl dark:text-white"
           >
             Pearl Lalenoor
           </Link>
@@ -35,8 +35,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`text-sm font-medium transition-all hover:scale-105 ${
                   pathname === link.href
-                    ? "font-semibold text-purple-800 dark:text-purple-600"
-                    : "text-zinc-700 hover:text-purple-800 dark:text-zinc-400 dark:hover:text-purple-600"
+                    ? "font-semibold text-black dark:text-white"
+                    : "text-black hover:text-black/80 dark:text-white dark:hover:text-white/80"
                 }`}
               >
                 {link.label}
@@ -50,17 +50,17 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             <span
-              className={`h-0.5 w-6 bg-purple-800 transition-all dark:bg-purple-600 ${
+              className={`h-0.5 w-6 bg-black transition-all dark:bg-white ${
                 isOpen ? "rotate-45 translate-y-2" : ""
               }`}
             ></span>
             <span
-              className={`h-0.5 w-6 bg-purple-800 transition-all dark:bg-purple-600 ${
+              className={`h-0.5 w-6 bg-black transition-all dark:bg-white ${
                 isOpen ? "opacity-0" : ""
               }`}
             ></span>
             <span
-              className={`h-0.5 w-6 bg-purple-800 transition-all dark:bg-purple-600 ${
+              className={`h-0.5 w-6 bg-black transition-all dark:bg-white ${
                 isOpen ? "-rotate-45 -translate-y-2" : ""
               }`}
             ></span>
@@ -80,8 +80,8 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
                   pathname === link.href
-                    ? "bg-purple-100 font-semibold text-purple-800 dark:bg-purple-900/30 dark:text-purple-600"
-                    : "text-zinc-700 hover:bg-purple-50 hover:text-purple-800 dark:text-zinc-400 dark:hover:bg-purple-900/20 dark:hover:text-purple-600"
+                    ? "bg-purple-100 font-semibold text-black dark:bg-purple-900/30 dark:text-white"
+                    : "text-black hover:bg-purple-50 hover:text-black/80 dark:text-white dark:hover:bg-purple-900/20 dark:hover:text-white/80"
                 }`}
               >
                 {link.label}
