@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import VideoPlayer from "@/components/video-player";
 
 // Project data - you can expand this with more details and images
 const projects: Record<
@@ -16,7 +15,6 @@ const projects: Record<
     images: string[];
     mainImage: string;
     repository?: string;
-    video?: string;
     publications?: Array<{
       title: string;
       viewLink: string;
@@ -88,7 +86,6 @@ const projects: Record<
     technologies: ["CV2", "FFT", "Matplotlib"],
     images: [],
     mainImage: "/image_processing.png",
-    video: "/output.mp4",
   },
   "rag-llm-agent": {
     title: "RAG Knowledge Chatbot – PDF & Web Document Assistant",
@@ -223,8 +220,8 @@ export default async function ProjectDetail({
           </div>
         )}
 
-        {/* Technologies - Show before Video if it exists, or at end if no Video/Gallery */}
-        {(project.video || (project.images && project.images.length > 0)) && (
+        {/* Technologies - Show before Gallery if it exists */}
+        {project.images && project.images.length > 0 && (
           <div className="mb-6 sm:mb-8">
             <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl dark:text-white">
               Technologies Used
@@ -242,22 +239,8 @@ export default async function ProjectDetail({
           </div>
         )}
 
-        {/* Video */}
-        {/* {project.video && (
-          <div className="mb-6 sm:mb-8">
-            <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl dark:text-white">
-              Video Demonstration
-            </h2>
-            <div className="flex justify-center">
-              <div className="w-full max-w-sm overflow-hidden rounded-lg border-2 border-purple-300 dark:border-purple-800">
-                <VideoPlayer src={project.video} className="h-auto w-full" />
-              </div>
-            </div>
-          </div>
-        )} */}
-
-        {/* Technologies - Show at end if no Video or Gallery */}
-        {!project.video && (!project.images || project.images.length === 0) && (
+        {/* Technologies - Show at end if no Gallery */}
+        {(!project.images || project.images.length === 0) && (
           <div className="mb-6 sm:mb-8">
             <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl dark:text-white">
               Technologies Used
