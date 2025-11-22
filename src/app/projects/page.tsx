@@ -15,7 +15,7 @@ export default function Projects() {
 
         <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {/* Project Card - RAG/LLM */}
-          <div className="group rounded-xl border-2 border-purple-300 bg-gradient-to-br from-white to-purple-50/50 p-4 sm:p-6 dark:border-purple-800 dark:from-zinc-900 dark:to-purple-950/30">
+          <div className="group rounded-xl border-2 border-purple-300 bg-gradient-to-br from-white to-purple-50/50 p-4 transition-all hover:scale-105 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-300 sm:p-6 dark:border-purple-800 dark:from-zinc-900 dark:to-purple-950/30 dark:hover:border-purple-700 dark:hover:shadow-purple-900/50">
             <Link
               href="/projects/rag-llm-agent"
               className="block cursor-pointer"
