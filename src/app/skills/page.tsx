@@ -26,20 +26,12 @@ export default function Skills() {
                 SQL
               </span>
               <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
-                MATLAB
-              </span>
-              <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
                 JavaScript
               </span>
               <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
                 TypeScript
               </span>
-              <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
-                HTML
-              </span>
-              <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
-                CSS
-              </span>
+              
             </div>
           </div>
 
@@ -59,7 +51,7 @@ export default function Skills() {
                 Next.js
               </span>
               <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
-                streamlit
+                Streamlit
               </span>
             </div>
           </div>
@@ -83,13 +75,28 @@ export default function Skills() {
                 Git
               </span>
               <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
-                Bash Scripts
-              </span>
-              <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
                 Figma
               </span>
               <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
                 ArcGIS
+              </span>
+              <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
+                MATLAB
+              </span>
+              <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
+                HuggingFace
+              </span>
+              <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
+                Groq
+              </span>
+              <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
+                OpenAI
+              </span>
+              <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
+                ChromaDB
+              </span>
+              <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
+                FAISS
               </span>
             </div>
           </div>
@@ -108,6 +115,13 @@ export default function Skills() {
               </span>
               <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
                 RAG Techniques
+              </span>
+
+              <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
+                Embeddings
+              </span>
+              <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
+                Knowledge Retrieval Systems
               </span>
               <span className="rounded-lg bg-zinc-100 px-3 py-1.5 text-sm text-black sm:px-4 sm:py-2 sm:text-base dark:bg-zinc-800 dark:text-white">
                 Exploratory Data Analysis

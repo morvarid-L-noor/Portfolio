@@ -1,11 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import ThemeToggle from "@/components/theme-toggle";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <ThemeToggle />
       {/* Hero Section */}
       <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden px-2 py-8 sm:px-4 sm:py-12">
         {/* Gradient Background */}

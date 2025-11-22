@@ -92,22 +92,11 @@ export default function Projects() {
             </p>
             <p className="mb-3 text-sm text-black sm:mb-4 sm:text-base dark:text-white">
               Developed an ML-based approach to optimize analog predistortion
-              (APD) circuits for power amplifiers in communication systems.
-              Collected and preprocessed measurement data from hardware to
-              analyze gain and phase transformations under varying control
-              voltages.
+              circuits in communication systems.
+              Collected and preprocessed data from hardware to
+              analyze gain and phase transformations under varying conditions.
             </p>
-            <ul className="mb-3 ml-4 list-disc space-y-1 text-xs text-black sm:mb-4 sm:text-sm dark:text-white">
-              <li>
-                Implemented dimensionality reduction using PCA to enhance
-                learning efficiency
-              </li>
-              <li>
-                Identified Random Forest as the most effective model for voltage
-                prediction
-              </li>
-              <li>Achieved 10 dB ACPR improvement during hardware testing</li>
-            </ul>
+            
             <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
               <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
                 Machine Learning
@@ -252,7 +241,7 @@ export default function Projects() {
               />
             </div>
             <h2 className="mb-2 text-lg font-semibold text-black transition-colors group-hover:text-black/80 sm:text-xl dark:text-white dark:group-hover:text-white/80">
-              Prediction of Musculoskeletal Disorders (BSc. Thesis)
+              Prediction of Musculoskeletal Disorders 
             </h2>
             <p className="mb-2 text-xs text-black sm:mb-3 sm:text-sm dark:text-white">
               Mar. 2021 - Sept. 2021
@@ -263,12 +252,7 @@ export default function Projects() {
               suitable for analysis. Applied CNN, MLP, SVM, and transfer
               learning to predict different disorders.
             </p>
-            <ul className="mb-3 ml-4 list-disc space-y-1 text-xs text-black sm:mb-4 sm:text-sm dark:text-white">
-              <li>
-                Transfer learning achieved best accuracy (85%) predicting ten
-                disorders
-              </li>
-            </ul>
+            
             <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
               <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
                 CNN

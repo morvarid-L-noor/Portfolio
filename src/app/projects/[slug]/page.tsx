@@ -9,12 +9,18 @@ const projects: Record<
     title: string;
     affiliation: string;
     date: string;
-    description: string;
+    description: string | string[];
     details?: string[];
     technologies: string[];
     images: string[];
     mainImage: string;
     repository?: string;
+    video?: string;
+    publications?: Array<{
+      title: string;
+      viewLink: string;
+      pdfLink: string;
+    }>;
   }
 > = {
   "ai-augmented-rfics": {
@@ -30,21 +36,41 @@ const projects: Record<
       "Achieved 10 dB ACPR improvement during hardware testing",
     ],
     technologies: ["Machine Learning", "PCA", "Random Forest", "Python"],
-    images: ["/general_overview.png"], // Add more image paths here
+    images: [],
     mainImage: "/general_overview.png",
   },
   "musculoskeletal-disorders": {
-    title: "Prediction of Musculoskeletal Disorders (BSc. Thesis)",
+    title: "Prediction of Musculoskeletal Disorders",
     affiliation: "",
     date: "Mar. 2021 - Sept. 2021",
-    description:
-      "Worked with a dataset collected over six years from 1,818 patients. Pre-processed the data to create a clean dataset suitable for analysis. Applied CNN, MLP, SVM, and transfer learning to predict different disorders.",
+    description: [
+      "This project focused on developing machine learning models to automatically detect various musculoskeletal disorders using dynamic foot pressure scan data. The goal was to explore whether plantar pressure distributions alone, without direct patient examination, could provide reliable diagnostic insights.",
+      "I worked with a clinical dataset consisting of multiple foot health conditions such as pes planus (flat foot), pes cavus (high arch), hallux valgus, splay foot, heel spur, toe-in gait, plantar fasciitis, diabetic foot abnormalities, ankle sprain indicators, and leg length discrepancy. The data included surface pressure maps, zone force matrices, and center-of-pressure trajectories extracted from motion frames.",
+      "To evaluate classification performance, I implemented and compared multiple ML and deep learning approaches, including Support Vector Machines (SVM), Multi-Layer Perceptrons (MLP), Convolutional Neural Networks (CNN), and transfer learning with fine-tuned pretrained models. The best performance achieved on binary and multi-class tasks reached accuracy levels up to 94% for specific conditions.",
+      "This work demonstrated that machine learning can effectively assist in preliminary foot disorder screening using pressure scan technology, especially valuable in clinical environments where manual examination or specialized equipment is limited. Future work could incorporate synthetic data generation using GANs to overcome data scarcity and improve generalization across all clinical categories.",
+    ],
     details: [
       "Transfer learning achieved best accuracy (85%) predicting ten disorders",
     ],
     technologies: ["CNN", "MLP", "SVM", "Transfer Learning"],
-    images: ["/bsc.png"], // Add more image paths here
+    images: ["/surface_pressure_frames.png", "/dynamic_examination_report.png"],
     mainImage: "/bsc.png",
+    publications: [
+      {
+        title:
+          "Neural Network and Support Vector Machine for Prediction of Foot Disorders Based on Foot Analysis",
+        viewLink:
+          "https://publications.waset.org/abstracts/139369/neural-network-and-support-vector-machine-for-prediction-of-foot-disorders-based-on-foot-analysis",
+        pdfLink: "https://publications.waset.org/abstracts/139369.pdf",
+      },
+      {
+        title:
+          "A Convolution Neural Network Approach to Predict Pes-planus Using Plantar Pressure Mapping Images",
+        viewLink:
+          "https://publications.waset.org/abstracts/139534/a-convolution-neural-network-approach-to-predict-pes-planus-using-plantar-pressure-mapping-images",
+        pdfLink: "https://publications.waset.org/abstracts/139534.pdf",
+      },
+    ],
   },
   "image-denoising": {
     title:
@@ -59,8 +85,9 @@ const projects: Record<
       "Created a video demonstrating the denoising process, transitioning from the original noisy image to the final enhanced version, frame by frame.",
     ],
     technologies: ["CV2", "FFT", "Matplotlib"],
-    images: ["/image_processing.png"], // Add more image paths here
+    images: [],
     mainImage: "/image_processing.png",
+    video: "/output.mp4",
   },
   "rag-llm-agent": {
     title: "RAG Knowledge Chatbot – PDF & Web Document Assistant",
@@ -93,7 +120,7 @@ const projects: Record<
       "Vercel",
       "Railway",
     ],
-    images: ["/chatBot.png"], // Add more image paths here
+    images: [],
     mainImage: "/chatBot.png",
     repository: "https://github.com/morvarid-L-noor/RAG_chatBot.git",
   },
@@ -130,15 +157,17 @@ export default async function ProjectDetail({
         </Link>
 
         {/* Main Image */}
-        <div className="mb-6 overflow-hidden rounded-xl sm:mb-8">
-          <Image
-            src={project.mainImage}
-            alt={project.title}
-            width={1200}
-            height={675}
-            className="h-auto w-full object-cover"
-            priority
-          />
+        <div className="mb-6 flex justify-center sm:mb-8">
+          <div className="w-full max-w-2xl overflow-hidden rounded-xl">
+            <Image
+              src={project.mainImage}
+              alt={project.title}
+              width={1200}
+              height={675}
+              className="h-auto w-full object-cover"
+              priority
+            />
+          </div>
         </div>
 
         {/* Project Header */}
@@ -166,9 +195,17 @@ export default async function ProjectDetail({
           <h2 className="mb-3 text-xl font-semibold text-black sm:text-2xl dark:text-white">
             Overview
           </h2>
-          <p className="text-base leading-relaxed text-black sm:text-lg dark:text-white">
-            {project.description}
-          </p>
+          {Array.isArray(project.description) ? (
+            <div className="space-y-4 text-base leading-relaxed text-black sm:text-lg dark:text-white">
+              {project.description.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+            </div>
+          ) : (
+            <p className="text-base leading-relaxed text-black sm:text-lg dark:text-white">
+              {project.description}
+            </p>
+          )}
         </div>
 
         {/* Details/Key Points */}
@@ -185,47 +222,60 @@ export default async function ProjectDetail({
           </div>
         )}
 
-        {/* Image Gallery */}
-        {project.images && project.images.length > 1 && (
+        {/* Technologies - Show before Video if it exists, or at end if no Video/Gallery */}
+        {(project.video || (project.images && project.images.length > 0)) && (
           <div className="mb-6 sm:mb-8">
             <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl dark:text-white">
-              Gallery
+              Technologies Used
             </h2>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {project.images.map((image, index) => (
-                <div
+            <div className="flex flex-wrap gap-2 sm:gap-3">
+              {project.technologies.map((tech, index) => (
+                <span
                   key={index}
-                  className="overflow-hidden rounded-lg border-2 border-purple-300 dark:border-purple-800"
+                  className="rounded-full bg-purple-100 px-3 py-1 text-sm font-medium text-purple-800 sm:px-4 sm:py-1.5 sm:text-base dark:bg-purple-900/50 dark:text-purple-400"
                 >
-                  <Image
-                    src={image}
-                    alt={`${project.title} - Image ${index + 1}`}
-                    width={600}
-                    height={400}
-                    className="h-auto w-full object-cover"
-                  />
-                </div>
+                  {tech}
+                </span>
               ))}
             </div>
           </div>
         )}
 
-        {/* Technologies */}
-        <div className="mb-6 sm:mb-8">
-          <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl dark:text-white">
-            Technologies Used
-          </h2>
-          <div className="flex flex-wrap gap-2 sm:gap-3">
-            {project.technologies.map((tech, index) => (
-              <span
-                key={index}
-                className="rounded-full bg-purple-100 px-3 py-1 text-sm font-medium text-purple-800 sm:px-4 sm:py-1.5 sm:text-base dark:bg-purple-900/50 dark:text-purple-400"
-              >
-                {tech}
-              </span>
-            ))}
+        {/* Video */}
+        {project.video && (
+          <div className="mb-6 sm:mb-8">
+            <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl dark:text-white">
+              Video Demonstration
+            </h2>
+            <div className="flex justify-center">
+              <div className="w-full max-w-2xl overflow-hidden rounded-lg border-2 border-purple-300 dark:border-purple-800">
+                <video controls className="h-auto w-full" preload="metadata">
+                  <source src={project.video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           </div>
-        </div>
+        )}
+
+        {/* Technologies - Show at end if no Video or Gallery */}
+        {!project.video && (!project.images || project.images.length === 0) && (
+          <div className="mb-6 sm:mb-8">
+            <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl dark:text-white">
+              Technologies Used
+            </h2>
+            <div className="flex flex-wrap gap-2 sm:gap-3">
+              {project.technologies.map((tech, index) => (
+                <span
+                  key={index}
+                  className="rounded-full bg-purple-100 px-3 py-1 text-sm font-medium text-purple-800 sm:px-4 sm:py-1.5 sm:text-base dark:bg-purple-900/50 dark:text-purple-400"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Repository Link */}
         {project.repository && (
@@ -254,6 +304,87 @@ export default async function ProjectDetail({
                 />
               </svg>
             </a>
+          </div>
+        )}
+
+        {/* Related Publications */}
+        {project.publications && project.publications.length > 0 && (
+          <div className="mb-6 sm:mb-8">
+            <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl dark:text-white">
+              Related Publications
+            </h2>
+            <div className="space-y-4">
+              {project.publications.map((publication, index) => (
+                <div
+                  key={index}
+                  className="rounded-lg border-2 border-purple-300 bg-purple-50/50 p-4 dark:border-purple-800 dark:bg-purple-950/30"
+                >
+                  <h3 className="mb-2 text-base font-semibold text-black dark:text-white sm:text-lg">
+                    {publication.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-3">
+                    <a
+                      href={publication.viewLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-semibold text-black transition-colors hover:text-purple-600 hover:underline dark:text-white dark:hover:text-purple-400"
+                    >
+                      View Paper →
+                    </a>
+                    <a
+                      href={publication.pdfLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-semibold text-black transition-colors hover:text-purple-600 hover:underline dark:text-white dark:hover:text-purple-400"
+                    >
+                      PDF →
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Image Gallery - Moved to end after Related Publications */}
+        {project.images && project.images.length > 0 && (
+          <div className="mb-6 sm:mb-8">
+            <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl dark:text-white">
+              Gallery
+            </h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              {project.images.map((image, index) => {
+                // Extract caption from filename (remove path and extension, replace underscores with spaces, capitalize)
+                const filename = image.split("/").pop() || "";
+                const caption = filename
+                  .replace(/\.[^/.]+$/, "") // Remove extension
+                  .replace(/_/g, " ") // Replace underscores with spaces
+                  .split(" ")
+                  .map(
+                    (word) =>
+                      word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+                  )
+                  .join(" ");
+
+                return (
+                  <div
+                    key={index}
+                    className="w-full max-w-xs overflow-hidden rounded-lg border-2 border-purple-300 dark:border-purple-800"
+                  >
+                    <Image
+                      src={image}
+                      alt={`${project.title} - ${caption}`}
+                      width={300}
+                      height={225}
+                      className="h-auto w-full object-cover"
+                    />
+                    <p className="p-2 text-center text-sm font-medium text-black dark:text-white">
+                      {caption}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         )}
       </div>
