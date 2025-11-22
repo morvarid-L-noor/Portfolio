@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import VideoPlayer from "@/components/video-player";
 
 // Project data - you can expand this with more details and images
 const projects: Record<
@@ -242,21 +243,18 @@ export default async function ProjectDetail({
         )}
 
         {/* Video */}
-        {project.video && (
+        {/* {project.video && (
           <div className="mb-6 sm:mb-8">
             <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl dark:text-white">
               Video Demonstration
             </h2>
             <div className="flex justify-center">
-              <div className="w-full max-w-2xl overflow-hidden rounded-lg border-2 border-purple-300 dark:border-purple-800">
-                <video controls className="h-auto w-full" preload="metadata">
-                  <source src={project.video} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+              <div className="w-full max-w-sm overflow-hidden rounded-lg border-2 border-purple-300 dark:border-purple-800">
+                <VideoPlayer src={project.video} className="h-auto w-full" />
               </div>
             </div>
           </div>
-        )}
+        )} */}
 
         {/* Technologies - Show at end if no Video or Gallery */}
         {!project.video && (!project.images || project.images.length === 0) && (

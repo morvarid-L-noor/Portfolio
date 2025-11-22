@@ -92,11 +92,11 @@ export default function Projects() {
             </p>
             <p className="mb-3 text-sm text-black sm:mb-4 sm:text-base dark:text-white">
               Developed an ML-based approach to optimize analog predistortion
-              circuits in communication systems.
-              Collected and preprocessed data from hardware to
-              analyze gain and phase transformations under varying conditions.
+              circuits in communication systems. Collected and preprocessed data
+              from hardware to analyze gain and phase transformations under
+              varying conditions.
             </p>
-            
+
             <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
               <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
                 Machine Learning
@@ -126,7 +126,7 @@ export default function Projects() {
               CANIS2 Hackathon Data Visualization and Foreign Interference
             </h2>
             <p className="mb-2 text-xs text-black sm:mb-3 sm:text-sm dark:text-white">
-              Nov 17 - Nov 20, 2023 | Winner ($3,500)
+              Nov 17 - Nov 20, 2023 | Winner
             </p>
             <p className="mb-3 text-sm text-black sm:mb-4 sm:text-base dark:text-white">
               Analyzed a dataset of 750 suspicious accounts on social media.
@@ -183,7 +183,7 @@ export default function Projects() {
               Canadian Network on Information and Security (CANIS) Hackathon
             </h2>
             <p className="mb-2 text-xs text-black sm:mb-3 sm:text-sm dark:text-white">
-              Mar 31 - Apr 3, 2023 | Winner ($4,000)
+              Mar 31 - Apr 3, 2023 | Winner
             </p>
             <p className="mb-3 text-sm text-black sm:mb-4 sm:text-base dark:text-white">
               Analyzed the "fake and true news" dataset. Deployed a tuned
@@ -241,7 +241,7 @@ export default function Projects() {
               />
             </div>
             <h2 className="mb-2 text-lg font-semibold text-black transition-colors group-hover:text-black/80 sm:text-xl dark:text-white dark:group-hover:text-white/80">
-              Prediction of Musculoskeletal Disorders 
+              Prediction of Musculoskeletal Disorders
             </h2>
             <p className="mb-2 text-xs text-black sm:mb-3 sm:text-sm dark:text-white">
               Mar. 2021 - Sept. 2021
@@ -252,7 +252,7 @@ export default function Projects() {
               suitable for analysis. Applied CNN, MLP, SVM, and transfer
               learning to predict different disorders.
             </p>
-            
+
             <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
               <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
                 CNN
@@ -288,21 +288,14 @@ export default function Projects() {
             <p className="mb-2 text-xs text-black sm:mb-3 sm:text-sm dark:text-white">
               Spring 2021
             </p>
-
-            <ul className="mb-3 ml-4 list-disc space-y-1 text-xs text-black sm:mb-4 sm:text-sm dark:text-white">
-              <li>
-                Recognized the type of noise that images had ( images were in
-                .dcm format )
-              </li>
-              <li>
-                Filtered images in the frequency domain for denoising (FFt)
-              </li>
-              <li>
-                Created a video demonstrating the denoising process,
-                transitioning from the original noisy image to the final
-                enhanced version, frame by frame.
-              </li>
-            </ul>
+            <p>
+              Recognized the type of noise that images had ( images were in .dcm
+              format ) and filtered images in the frequency domain for denoising
+              (FFt)
+            </p>
+            <br />
+            <br />
+            <br />
             <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
               <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
                 CV2
