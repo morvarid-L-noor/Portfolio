@@ -15,64 +15,61 @@ export default function Projects() {
 
         <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {/* Project Card - RAG/LLM */}
-          {/* <Link
-            href="/projects/rag-llm-agent"
-            className="group cursor-pointer rounded-xl border-2 border-purple-300 bg-gradient-to-br from-white to-purple-50/50 p-4 transition-all hover:scale-105 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-300 sm:p-6 dark:border-purple-800 dark:from-zinc-900 dark:to-purple-950/30 dark:hover:border-purple-700 dark:hover:shadow-purple-900/50"
-          >
-            <div className="mb-3 aspect-video rounded-lg bg-gradient-to-br from-purple-200 to-purple-300 sm:mb-4 dark:from-purple-900 dark:to-purple-800">
-              <img
-                src="/general_overview.png"
-                alt="RAG and LLM Agent for Special Education"
-                className="w-full h-full object-cover"
-              />
+          <div className="group rounded-xl border-2 border-purple-300 bg-gradient-to-br from-white to-purple-50/50 p-4 sm:p-6 dark:border-purple-800 dark:from-zinc-900 dark:to-purple-950/30">
+            <Link
+              href="/projects/rag-llm-agent"
+              className="block cursor-pointer"
+            >
+              <div className="mb-3 aspect-video rounded-lg bg-gradient-to-br from-purple-200 to-purple-300 sm:mb-4 dark:from-purple-900 dark:to-purple-800">
+                <img
+                  src="/chatBot.png"
+                  alt="RAG Knowledge Chatbot – PDF & Web Document Assistant"
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+              <h2 className="mb-2 text-lg font-semibold text-black transition-colors group-hover:text-black/80 sm:text-xl dark:text-white dark:group-hover:text-white/80">
+                RAG Knowledge Chatbot – PDF & Web Document Assistant
+              </h2>
+              <p className="mb-3 text-sm text-black sm:mb-4 sm:text-base dark:text-white">
+                An AI-powered chatbot that enables users to build their own
+                personal knowledge base by uploading PDFs or submitting website
+                links. The system automatically extracts, cleans, and segments
+                text, converts it into vector embeddings, and stores it in a
+                persistent database for conversational querying using RAG.
+              </p>
+              <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
+                <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
+                  Next.js
+                </span>
+                <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
+                  TypeScript
+                </span>
+                <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
+                  FastAPI
+                </span>
+                <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
+                  ChromaDB
+                </span>
+                <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
+                  RAG
+                </span>
+                <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
+                  Groq API
+                </span>
+              </div>
+            </Link>
+            <div className="flex gap-4">
+              <a
+                href="https://github.com/morvarid-L-noor/RAG_chatBot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-semibold text-black transition-colors hover:text-black/80 dark:text-white dark:hover:text-white/80"
+              >
+                <br />
+                View Repository →
+              </a>
             </div>
-            <h2 className="mb-2 text-lg font-semibold text-black transition-colors group-hover:text-black/80 sm:text-xl dark:text-white dark:group-hover:text-white/80">
-              RAG and LLM Agent for Special Education
-            </h2>
-            <p className="mb-2 text-xs text-black sm:mb-3 sm:text-sm dark:text-white">
-              Pointsville | Jun. 2024 - Aug. 2024
-            </p>
-            <p className="mb-3 text-sm text-black sm:mb-4 sm:text-base dark:text-white">
-              Built an AI agent to centralize information for special education
-              (SPED) children and assist parents in understanding available
-              services and interpreting IEPs. Developed web scraping and data
-              querying tools using Python (FastAPI) and LangChain, enabling
-              context-aware responses from a vector database (FAISS).
-            </p>
-            <ul className="mb-3 ml-4 list-disc space-y-1 text-xs text-black sm:mb-4 sm:text-sm dark:text-white">
-              <li>
-                Implemented RAG (Retrieval-Augmented Generation) architecture
-                for accurate, context-aware responses
-              </li>
-              <li>
-                Built vector database using FAISS for efficient semantic search
-              </li>
-              <li>
-                Developed web scraping pipeline to collect and index relevant
-                information
-              </li>
-            </ul>
-            <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
-              <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
-                RAG
-              </span>
-              <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
-                LLM
-              </span>
-              <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
-                LangChain
-              </span>
-              <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
-                FastAPI
-              </span>
-              <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
-                FAISS
-              </span>
-              <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-800 sm:px-3 sm:py-1 sm:text-sm dark:bg-purple-900/50 dark:text-purple-400">
-                Python
-              </span>
-            </div>
-          </Link> */}
+          </div>
 
           {/* Project Card 1 - RFIC */}
           <Link

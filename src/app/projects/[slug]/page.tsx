@@ -14,6 +14,7 @@ const projects: Record<
     technologies: string[];
     images: string[];
     mainImage: string;
+    repository?: string;
   }
 > = {
   "ai-augmented-rfics": {
@@ -62,20 +63,39 @@ const projects: Record<
     mainImage: "/image_processing.png",
   },
   "rag-llm-agent": {
-    title: "RAG and LLM Agent for Special Education",
-    affiliation: "Pointsville",
-    date: "Jun. 2024 - Aug. 2024",
+    title: "RAG Knowledge Chatbot – PDF & Web Document Assistant",
+    affiliation: "",
+    date: "",
     description:
-      "Built an AI agent to centralize information for special education (SPED) children and assist parents in understanding available services and interpreting IEPs. Developed web scraping and data querying tools using Python (FastAPI) and LangChain, enabling context-aware responses from a vector database (FAISS).",
+      "This project is an AI-powered chatbot that enables users to build their own personal knowledge base by uploading PDFs or submitting website links. The system automatically extracts, cleans, and segments text from these sources, converts it into vector embeddings, and stores it in a persistent database. Users can then ask questions directly about the uploaded content, and the chatbot retrieves the most relevant information to generate accurate, grounded responses using a Retrieval-Augmented Generation (RAG) pipeline. The web interface provides a smooth workflow for managing ingested documents and engaging in contextual conversations. It combines modern frontend design, scalable serverless backend architecture, and production-ready AI capabilities using completely free cloud resources.",
     details: [
-      "Implemented RAG (Retrieval-Augmented Generation) architecture for accurate, context-aware responses",
-      "Built vector database using FAISS for efficient semantic search",
-      "Developed web scraping pipeline to collect and index relevant information",
-      "Created FastAPI backend with LangChain integration for real-time query processing",
+      "Upload PDFs or ingest content from URLs with automatic text extraction, chunking, embedding, and storage",
+      "Conversational querying grounded in retrieved context for accurate, relevant responses",
+      "Persistent vector database for long-term knowledge retention using ChromaDB",
+      "Simple, accessible UI for continuous user interaction built with Next.js and TypeScript",
+      "Fully deployed and always online with zero hosting cost using Vercel and Railway free tier",
+      "Web scraping and parsing capabilities using BeautifulSoup, Newspaper3k, and PyMuPDF",
+      "LLM inference powered by Llama models via Groq API for fast, free responses",
     ],
-    technologies: ["RAG", "LLM", "LangChain", "FastAPI", "FAISS", "Python"],
-    images: ["/general_overview.png"], // Add more image paths here
-    mainImage: "/general_overview.png",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "FastAPI",
+      "ChromaDB",
+      "Sentence Transformers",
+      "RAG",
+      "Groq API",
+      "BeautifulSoup",
+      "Newspaper3k",
+      "PyMuPDF",
+      "Vercel",
+      "Railway",
+    ],
+    images: ["/chatBot.png"], // Add more image paths here
+    mainImage: "/chatBot.png",
+    repository: "https://github.com/morvarid-L-noor/RAG_chatBot.git",
   },
 };
 
@@ -133,9 +153,11 @@ export default async function ProjectDetail({
                 {project.affiliation}
               </p>
             )}
-            <p>
-              <span className="font-medium">Date:</span> {project.date}
-            </p>
+            {project.date && (
+              <p>
+                <span className="font-medium">Date:</span> {project.date}
+              </p>
+            )}
           </div>
         </div>
 
@@ -204,8 +226,37 @@ export default async function ProjectDetail({
             ))}
           </div>
         </div>
+
+        {/* Repository Link */}
+        {project.repository && (
+          <div className="mb-6 sm:mb-8">
+            <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl dark:text-white">
+              Repository
+            </h2>
+            <a
+              href={project.repository}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-purple-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-purple-700 sm:px-6 sm:py-3 sm:text-base dark:bg-purple-800 dark:hover:bg-purple-700"
+            >
+              View on GitHub
+              <svg
+                className="h-4 w-4 sm:h-5 sm:w-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </a>
+          </div>
+        )}
       </div>
     </main>
   );
 }
-
